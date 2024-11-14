@@ -23,7 +23,7 @@ Navigate to the project directory:
 cd hand-gesture-recognition-main
 ```
 
-Install the project dependencies using npm:
+Install the project dependencies using pip:
 ```
 pip install [necessary modules/packages]
 ```
