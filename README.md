@@ -37,7 +37,7 @@ python app.py
 ```
 ## Deployment Options
 
-### Steeamlit
+### Streamlit
 
 ```
 cd hand-gesture-recognition-main
