@@ -30,7 +30,7 @@ pip install [necessary modules/packages]
 
 ### Running the Project
 
-Start the development server:
+Start the local server:
 ```
 python app.py
 
