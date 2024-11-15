@@ -141,7 +141,7 @@ def main():
         debug_frame = draw_point_history(debug_frame, point_history_deque)
         debug_frame = draw_info(debug_frame,  fps_value, current_mode, number)
 
-        cv.imshow('Here is gesture recognition!', debug_frame)
+        cv.imshow('Here is a gesture recognition tool!', debug_frame)
 
     video_capture.release()
     cv.destroyAllWindows()
@@ -374,9 +374,9 @@ def draw_info_text(image, bounding_rect, handedness, hand_sign_text,
                cv.FONT_HERSHEY_COMPLEX, 0.6, (255, 255, 255), 1, cv.LINE_AA)
 
     if finger_gesture_text != "":
-        cv.putText(image, "Finger Gesture:" + finger_gesture_text, (10, 60),
+        cv.putText(image, "Gesture of finger->" + finger_gesture_text, (10, 60),
                    cv.FONT_HERSHEY_COMPLEX, 1.0, (0, 0, 0), 4, cv.LINE_AA)
-        cv.putText(image, "Finger Gesture:" + finger_gesture_text, (10, 60),
+        cv.putText(image, "Gesture of finger->" + finger_gesture_text, (10, 60),
                    cv.FONT_HERSHEY_COMPLEX, 1.0, (255, 255, 255), 2,
                    cv.LINE_AA)
 
@@ -391,17 +391,17 @@ def draw_point_history(image, point_history):
     return image
 
 def draw_info(image,fps_value, current_mode, number):
-    cv.putText(image, "FPS:" + str(fps_value), (10, 30), cv.FONT_HERSHEY_SIMPLEX,
+    cv.putText(image, "Frames Per Second->" + str(fps_value), (10, 30), cv.FONT_HERSHEY_COMPLEX,
                1.0, (0, 0, 0), 4, cv.LINE_AA)
-    cv.putText(image, "FPS:" + str(fps_value), (10, 30), cv.FONT_HERSHEY_SIMPLEX,
+    cv.putText(image, "Frames Per Second->" + str(fps_value), (10, 30), cv.FONT_HERSHEY_COMPLEX,
                1.0, (255, 255, 255), 2, cv.LINE_AA)
     mode_string = ['Logging Key Point', 'Logging Point History']
     if 1 <= current_mode <= 2:
-        cv.putText(image, "MODE:" + mode_string[current_mode - 1], (10, 90),
+        cv.putText(image, "Mode->" + mode_string[current_mode - 1], (10, 90),
                    cv.FONT_HERSHEY_COMPLEX, 0.6, (255, 255, 255), 1,
                    cv.LINE_AA)
         if 0 <= number <= 9:
-            cv.putText(image, "NUM:" + str(number), (10, 110),
+            cv.putText(image, "Num->" + str(number), (10, 110),
                        cv.FONT_HERSHEY_COMPLEX, 0.6, (255, 255, 255), 1,
                        cv.LINE_AA)
     return image
