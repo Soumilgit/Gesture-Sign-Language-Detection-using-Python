@@ -30,12 +30,19 @@ pip install [necessary modules/packages]
 ```
 
 ### Running the Project
-
+1.Showcase:
 Start the local server:
 ```
 python app.py
 
 ```
+2.Accuracy scoring:
+Start the local server:
+```
+python accuracy_score_checker.py
+
+```
+
 ## Deployment Options
 
 ### Streamlit
