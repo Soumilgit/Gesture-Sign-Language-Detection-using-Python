@@ -30,7 +30,7 @@ pip install [necessary modules/packages]
 ```
 
 ### Running the Project
-## Showcase:
+## Showcase - please DO CHECK this, in case you're facing issues with running on VSCode:
 Start the local server:
 ```
 python app.py
