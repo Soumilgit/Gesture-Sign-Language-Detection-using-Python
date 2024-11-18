@@ -30,7 +30,7 @@ pip install [necessary modules/packages]
 ```
 
 ### Running the Project
-### Showcase:
+## Showcase:
 Start the local server:
 ```
 python app.py
