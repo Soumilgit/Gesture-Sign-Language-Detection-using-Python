@@ -36,6 +36,7 @@ Start the local server:
 python app.py
 
 ```
+## End of MOST IMPORTANT step ABOVE
 Accuracy scoring:
 Start the local server:
 ```
