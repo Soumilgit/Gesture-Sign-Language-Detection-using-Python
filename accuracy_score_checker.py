@@ -1,3 +1,6 @@
+'''
+Additionally, it supports LOGGING KEYPOINTS and GESTURE HISTORIES for training CLASSIFIERS.
+'''
 import argparse
 import copy
 import csv
