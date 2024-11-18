@@ -29,7 +29,7 @@ Install the project dependencies using pip:
 pip install [necessary modules/packages]
 ```
 
-### Running the Project
+## Running the Project
 ## Showcase - please DO CHECK this, in case you're facing issues with running on VSCode:
 Start the local server:
 ```
