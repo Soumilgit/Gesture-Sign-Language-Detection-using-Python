@@ -37,12 +37,13 @@ python app.py
 
 ```
 ## End of MOST IMPORTANT step ABOVE
-Accuracy scoring + logging keypoints and gesture histories for training classifiers.:
-Start the local server:
+Accuracy scoring + logging keypoints and gesture histories for training classifiers:
+<p>
+<br>Start the local server:</br>
 ```
 python accuracy_score_checker.py
-
 ```
+</p>
 
 ## Deployment Options
 
