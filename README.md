@@ -37,7 +37,7 @@ python app.py
 
 ```
 ## End of MOST IMPORTANT step ABOVE
-Accuracy scoring + logging keypoints and gesture histories for training classifiers:
+Accuracy SCORING + LOGGING KEYPOINTS and GESTURE HISTORIES for training CLASSIFIERS:
 <p>
 <br>Start the local server:</br>
 
