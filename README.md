@@ -1,5 +1,5 @@
 # Gesture Sign Language Detection using Python
-Future Scope: Integrate this inside a website for the purpose of usability by the deaf/people in need!
+Future Scope: To integrate this in a website for the purpose of usability by the deaf/people in need!
 
 ## Tech Stack
 
