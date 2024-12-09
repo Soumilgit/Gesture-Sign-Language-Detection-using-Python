@@ -14,8 +14,6 @@ import numpy as np
 from model import KeyPointClassifier, PointHistoryClassifier
 from utils import CvFpsCalc
 
-#Reference: pranayrishi
-
 def get_the_arguments():
     arg_parse = argparse.ArgumentParser()
 
