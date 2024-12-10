@@ -36,7 +36,8 @@ def get_the_arguments():
     return arguments
 
 def main():
-  
+
+
     arguments = get_the_arguments()
 
     vid_d = arguments.device
@@ -358,6 +359,7 @@ def draw_landmarks(img, landmark_pts):
             cv.circle(img, (landmark[0], landmark[1]), 5, (255, 165, 0),
                       -1)
             cv.circle(img, (landmark[0], landmark[1]), 5, (0, 128, 0), 1)
+        
     return img
 
 def draw_bound_rect(enable_brect, img, bound_rectangle):
@@ -367,24 +369,25 @@ def draw_bound_rect(enable_brect, img, bound_rectangle):
     return img
 
 def draw_information_txt(img, bound_rectangle, handedness, hand_sign_txt,
-                   finger_gesture_text):
+                         finger_gesture_text):
     cv.rectangle(img, (bound_rectangle[0], bound_rectangle[1]), (bound_rectangle[2], bound_rectangle[1] - 22),
                  (0, 0, 0), -1)
 
-    information_text = handedness.classification [0].label[0:]
+    information_text = handedness.classification[0].label[0:]
     if hand_sign_txt != "":
         information_text = information_text + ':' + hand_sign_txt
     cv.putText(img, information_text, (bound_rectangle[0] + 5, bound_rectangle[1] - 4),
                cv.FONT_HERSHEY_COMPLEX, 0.6, (255, 255, 255), 1, cv.LINE_AA)
 
-    if finger_gesture_text != "":
-        cv.putText(img, "Gesture of finger->" + finger_gesture_text, (10, 60),
+    if finger_gesture_text != "" and finger_gesture_text != "?":  
+        cv.putText(img, "Gesture of finger - " + finger_gesture_text, (10, 60),
                    cv.FONT_HERSHEY_COMPLEX, 1.0, (0, 0, 0), 4, cv.LINE_AA)
-        cv.putText(img, "Gesture of finger->" + finger_gesture_text, (10, 60),
+        cv.putText(img, "Gesture of finger - " + finger_gesture_text, (10, 60),
                    cv.FONT_HERSHEY_COMPLEX, 1.0, (255, 255, 255), 2,
                    cv.LINE_AA)
 
     return img
+
 
 def draw_pt_history(img, pt_history):
     for ind, point in enumerate(pt_history):
@@ -395,20 +398,21 @@ def draw_pt_history(img, pt_history):
     return img
 
 def draw_information(img,fps_val, curr_mode, num):
-    cv.putText(img, "Frames Per Second->" + str(fps_val), (10, 30), cv.FONT_HERSHEY_COMPLEX,
+    cv.putText(img, "Frames Per Second - " + str(fps_val), (10, 30), cv.FONT_HERSHEY_COMPLEX,
                1.0, (0, 0, 0), 4, cv.LINE_AA)
-    cv.putText(img, "Frames Per Second->" + str(fps_val), (10, 30), cv.FONT_HERSHEY_COMPLEX,
+    cv.putText(img, "Frames Per Second - " + str(fps_val), (10, 30), cv.FONT_HERSHEY_COMPLEX,
                1.0, (255, 255, 255), 2, cv.LINE_AA)
     mode_string = ['Logging Key Point', 'Logging Point History']
     if 1 <= curr_mode <= 2:
-        cv.putText(img, "Mode->" + mode_string[curr_mode - 1], (10, 90),
+        cv.putText(img, "Mode - " + mode_string[curr_mode - 1], (10, 90),
                    cv.FONT_HERSHEY_COMPLEX, 0.6, (255, 255, 255), 1,
                    cv.LINE_AA)
         if 0 <= num <= 9:
-            cv.putText(img, "Num->" + str(num), (10, 110),
+            cv.putText(img, "Num - " + str(num), (10, 110),
                        cv.FONT_HERSHEY_COMPLEX, 0.6, (255, 255, 255), 1,
                        cv.LINE_AA)
     return img
 
 if __name__ == '__main__':
     main()
+    
