@@ -4,7 +4,6 @@ Future Scope: To integrate this in a website for the purpose of usability by the
 # Folder Structure
 Here is the folder structure of the repository :
 ```
-📦 
 .github
 │  └─ FUNDING.yml
 LICENSE
