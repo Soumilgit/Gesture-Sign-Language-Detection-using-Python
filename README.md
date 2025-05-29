@@ -1,6 +1,7 @@
 # Gesture Sign Language Detection using Python
 Future Scope : To integrate this in a website for the purpose of usability by the deaf/people in need!
-
+# Architecture Diagram :
+![image](https://github.com/user-attachments/assets/fbfb0fc2-6134-48d7-a950-ba5810816c1d)
 # Folder Structure
 Here is the folder structure of the repository :
 ```
